@@ -37,9 +37,6 @@ const streamReducer = (state = {}, action) => {
 		case CREATE_STREAM:
 			return { ...state, [action.payload.id]: action.payload };
 		case EDIT_STREAM:
-			// const newState = { ...state };
-			// newState[action.payload.id] = action.payload;
-			// return newState;
 			return { ...state, [action.payload.id]: action.payload };
 		case DELETE_STREAM:
 			return _.omit(state, action.payload);

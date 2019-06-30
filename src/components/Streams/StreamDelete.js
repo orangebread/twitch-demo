@@ -14,7 +14,6 @@ class StreamDelete extends Component {
 	renderActions() {
 		const { id } = this.props.match.params;
 		return (
-			// React.Fragment avoids <div> nesting -- use <> </> short hand
 			<React.Fragment>
 				<button onClick={() => this.props.deleteStream(id)} className="ui button negative">Delete</button>
 				<Link to="/" className="ui button">Cancel</Link>
@@ -47,5 +46,4 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(
 	mapStateToProps,
-	{fetchStream, deleteStream})
-(StreamDelete);
+	{fetchStream, deleteStream})(StreamDelete);
